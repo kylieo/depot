@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'store/index'
+
   resources :products
   # == Route Map
 #
@@ -11,4 +13,9 @@ Rails.application.routes.draw do
 #                     PATCH  /products/:id(.:format)             products#update
 #                     PUT    /products/:id(.:format)             products#update
 #                     DELETE /products/:id(.:format)             products#destroy
+  root :to => 'store#index', :as => 'store'
+# ...
+
 end
+
+
